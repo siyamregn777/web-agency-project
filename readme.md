@@ -1,11 +1,6 @@
 ```markdown
 # Nexify — Digital Agency for Accessible Innovation
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-
 A modern, production-ready, and fully accessible website for a fictitious web agency. Built with semantic HTML5, vanilla CSS, and JavaScript — no frameworks, no CMS. Follows WCAG 2.1 AA standards, mobile-first design principles, and includes an interactive form, hamburger menu, dark/light theme toggle, and a formal accessibility statement.
 
 🔗 **Live Demo:** *[Add your Netlify/Vercel/GitHub Pages link here]*
@@ -31,23 +26,6 @@ A modern, production-ready, and fully accessible website for a fictitious web ag
 - ✅ **No frameworks or CMS** – 100% vanilla HTML/CSS/JS
 
 ## 📁 Project Structure
-
-```
-web-agency-project/
-│
-├── index.html              # Homepage
-├── services.html           # Services page (third page)
-├── accessibility.html      # Accessibility statement (DIGG template)
-│
-├── css/
-│   └── style.css           # All styles (no frameworks)
-│
-├── js/
-│   └── script.js           # Hamburger menu, theme toggle, form validation
-│
-└── images/                 # (Optional) Your custom images folder
-    └── (add your images here)
-```
 
 ## 🚀 Quick Start
 
@@ -113,65 +91,6 @@ Edit the CSS variables in `css/style.css`:
 <img src="images/your-logo.png" alt="Nexify logo" class="logo-img">
 ```
 
-### Modifying the theme toggle position
-
-In `css/style.css`, adjust the `.theme-toggle-btn` rules:
-
-```css
-.theme-toggle-btn {
-    top: 1rem;
-    right: 1rem;   /* Change to 'left: 1rem' for left edge */
-}
-```
-
-### Disabling dark mode (optional)
-
-Remove the theme toggle button from all HTML files, or comment out the JavaScript section handling `#themeToggle`.
-
-## ♿ Accessibility Features
-
-| Feature | Implementation |
-|---------|----------------|
-| Skip to main content | `.skip-link` hidden until focused |
-| Semantic landmarks | `<header>`, `<main>`, `<footer>`, `<nav>`, `<section>` |
-| ARIA attributes | `aria-label`, `aria-expanded`, `aria-current`, `aria-hidden` |
-| Keyboard navigation | All interactive elements reachable via Tab |
-| Focus indicators | Visible outline on `:focus` |
-| Color contrast | Minimum 4.5:1 ratio (WCAG AA) |
-| Screen reader ready | Proper heading hierarchy, alt text, form labels |
-| Responsive zoom | No horizontal scroll up to 200% zoom |
-
-The accessibility statement page follows the [Swedish DIGG template](https://www.digg.se/) for public sector compliance.
-
-## 📱 Responsive Breakpoints
-
-| Device | Breakpoint | Features |
-|--------|------------|----------|
-| Mobile | < 768px | Hamburger menu, stacked layout, 1 column grid |
-| Tablet | 768px - 1024px | Horizontal nav, 2-3 column grids |
-| Desktop | > 1024px | Full layout, max-width 1280px container |
-
-## 🧪 Browser Support
-
-| Chrome | Firefox | Safari | Edge | iOS Safari | Chrome Android |
-|--------|---------|--------|------|------------|----------------|
-| Latest | Latest | Latest | Latest | 14+ | Latest |
-
-## 📝 Form Submission
-
-The contact form includes client-side validation but **does not actually submit data** (demo mode). To enable backend submission:
-
-1. Add a `method="POST"` and `action="your-endpoint"` to the `<form>` tag
-2. Or integrate with a service like Formspree, Netlify Forms, or EmailJS
-
-Example with Netlify Forms:
-
-```html
-<form class="agency-form" id="demoForm" method="POST" netlify>
-    <!-- ... form fields ... -->
-</form>
-```
-
 ## 🛠️ Technologies Used
 
 - **HTML5** – Semantic markup, ARIA, modern input types
@@ -179,41 +98,3 @@ Example with Netlify Forms:
 - **Vanilla JavaScript** – DOM manipulation, event handling, localStorage
 - **Google Fonts** – Inter font family
 - **Unsplash** – High-quality placeholder images (replaceable)
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 🙏 Credits
-
-- Images from [Unsplash](https://unsplash.com)
-- Placeholder icons from [Placehold.co](https://placehold.co)
-- Accessibility guidelines from [W3C WCAG 2.1](https://www.w3.org/WAI/WCAG21/quickref/)
-
-## 📬 Contact
-
-For questions or feedback about this template:
-
-- **Email:** hello@nexify.agency (fictitious)
-- **GitHub Issues:** [Create an issue](https://github.com/yourusername/nexify-agency/issues)
-
----
-
-## 📦 Deployment to GitHub Pages
-
-1. Push this repository to GitHub
-2. Go to **Settings → Pages**
-3. Under **Branch**, select `main` and `/ (root)`
-4. Click **Save**
-5. Your site will be live at `https://yourusername.github.io/nexify-agency/`
-
-## 🚢 Deployment to Netlify / Vercel
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/yourusername/nexify-agency)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/nexify-agency)
-
----
-
-**Made with ♿ by Nexify — because the web should work for everyone.**
-```
