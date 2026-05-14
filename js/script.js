@@ -1,6 +1,6 @@
 // js/script.js
 document.addEventListener('DOMContentLoaded', function() {
-    // Theme Toggle functionality
+    // Theme Toggle functionality - affects body only, footer stays dark
     const themeToggle = document.getElementById('themeToggle');
     const themeIcon = themeToggle ? themeToggle.querySelector('.theme-icon') : null;
     
