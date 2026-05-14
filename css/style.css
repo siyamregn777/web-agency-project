@@ -1,4 +1,4 @@
-/* css/style.css */
+/* css/style.css - Complete fixed file */
 :root {
     --primary: #3b82f6;
     --primary-dark: #2563eb;
@@ -7,6 +7,7 @@
     --gray-800: #1e293b;
     --gray-600: #475569;
     --gray-400: #94a3b8;
+    --gray-200: #e2e8f0;
     --gray-100: #f1f5f9;
     --white: #ffffff;
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
@@ -16,11 +17,12 @@
     --radius-sm: 0.5rem;
 }
 
-/* Dark mode variables - affects body only, not footer */
+/* Dark mode variables */
 [data-theme="dark"] {
     --dark: #f1f5f9;
     --gray-800: #e2e8f0;
     --gray-600: #cbd5e1;
+    --gray-200: #334155;
     --gray-400: #94a3b8;
     --gray-100: #1e293b;
     --white: #0f172a;
@@ -49,33 +51,55 @@ body {
     padding: 0 1.5rem;
 }
 
-/* Theme Toggle Button - Fixed at top right edge */
-.theme-toggle-btn {
+/* Theme Toggle Button - Fixed position */
+.theme-toggle-fixed {
     position: fixed;
-    top: 1rem;
-    right: 1rem;
-    z-index: 1000;
     background: var(--primary);
     border: none;
-    width: 41px;
-    height: 41px;
-    border-radius: 50%;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: var(--shadow-lg);
     transition: transform 0.2s ease, background 0.2s ease;
-    border: 2px solid rgba(255,255,255,0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    z-index: 1000;
 }
 
-.theme-toggle-btn:hover {
+/* Desktop: top-right corner */
+@media (min-width: 769px) {
+    .theme-toggle-fixed {
+        top: 1rem;
+        right: 1rem;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+    }
+}
+
+/* Mobile: bottom-right corner (away from hamburger) */
+@media (max-width: 768px) {
+    .theme-toggle-fixed {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+    }
+    
+    /* Add padding so toggle doesn't cover footer content */
+    main {
+        padding-bottom: 5rem;
+    }
+}
+
+.theme-toggle-fixed:hover {
     transform: scale(1.05);
     background: var(--primary-dark);
 }
 
 .theme-icon {
-    font-size: 1.0rem;
+    font-size: 1.5rem;
     pointer-events: none;
 }
 
@@ -196,10 +220,9 @@ h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
     color: var(--primary);
 }
 
-/* Header & Navigation - matches other sections */
+/* Header & Navigation */
 .site-header {
     background: var(--white);
-    backdrop-filter: blur(0px);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -234,6 +257,22 @@ h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
     transition: all 0.2s ease;
 }
 
+/* Overlay for clicking outside */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 98;
+    display: none;
+}
+
+.menu-overlay.active {
+    display: block;
+}
+
 .primary-nav {
     position: fixed;
     top: 0;
@@ -266,6 +305,7 @@ h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
     padding: 0.5rem 0;
     font-size: 1.25rem;
     transition: color 0.2s;
+    display: block;
 }
 
 .nav-link:hover,
@@ -298,7 +338,7 @@ h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
     }
 }
 
-/* Hero Section with image background */
+/* Hero Section */
 .hero {
     padding: 4rem 0;
     position: relative;
@@ -454,7 +494,7 @@ h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(59,130,246,0.2);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
 }
 
 .form-note {
@@ -473,7 +513,7 @@ h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
     }
 }
 
-/* Showcase with image backgrounds */
+/* Showcase */
 .showcase {
     padding: 4rem 0;
     background: var(--gray-100);
@@ -514,7 +554,7 @@ h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
     }
 }
 
-/* Services Page with image background */
+/* Services Page */
 .page-hero {
     background: linear-gradient(135deg, var(--dark), var(--gray-800));
     color: white;
@@ -536,7 +576,7 @@ h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
 }
 
 .services-hero .container {
@@ -592,7 +632,7 @@ h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
     }
 }
 
-/* Accessibility Statement page with image background */
+/* Accessibility Statement page */
 .accessibility-hero {
     background-image: url('https://images.unsplash.com/photo-1559028012-481c04fa702d?w=1600&h=400&fit=crop');
     background-size: cover;
@@ -607,7 +647,7 @@ h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
 }
 
 .accessibility-hero .container {
@@ -732,7 +772,7 @@ h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
     }
 }
 
-/* Dark mode adjustments for images - subtle overlay */
+/* Dark mode adjustments for images */
 [data-theme="dark"] .hero-image img,
 [data-theme="dark"] .showcase-item img {
     filter: brightness(0.9);
