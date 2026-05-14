@@ -1,5 +1,34 @@
-// Navbar is always visible, no toggle needed// js/script.js
+// js/script.js
 document.addEventListener('DOMContentLoaded', function() {
+    // Theme Toggle functionality
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = themeToggle ? themeToggle.querySelector('.theme-icon') : null;
+    
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        if (themeIcon) themeIcon.textContent = '☀️';
+    } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        if (themeIcon) themeIcon.textContent = '🌙';
+    }
+    
+    if (themeToggle) {
+        themeToggle.addEventListener('click', function() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+                if (themeIcon) themeIcon.textContent = '🌙';
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                if (themeIcon) themeIcon.textContent = '☀️';
+            }
+        });
+    }
+    
     // Hamburger menu toggle
     const navToggle = document.getElementById('navToggle');
     const primaryNav = document.getElementById('primaryNav');
@@ -35,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', function() {
         if (window.innerWidth >= 768 && primaryNav && primaryNav.classList.contains('nav-open')) {
             primaryNav.classList.remove('nav-open');
-            navToggle.setAttribute('aria-expanded', 'false');
+            if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
             document.body.style.overflow = '';
         }
     });
@@ -111,15 +140,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Active navigation highlight based on current page (simple)
+    // Active navigation highlight based on current page
     const currentPath = window.location.pathname;
     const navLinksAll = document.querySelectorAll('.nav-link');
     navLinksAll.forEach(link => {
         const linkPath = link.getAttribute('href');
-        if (linkPath === 'index.html' && (currentPath === '/' || currentPath.endsWith('index.html') || currentPath === '')) {
+        if (linkPath === 'index.html' && (currentPath === '/' || currentPath.endsWith('index.html') || currentPath === '' || currentPath.endsWith('/'))) {
             link.classList.add('active');
             link.setAttribute('aria-current', 'page');
-        } else if (linkPath && currentPath.includes(linkPath)) {
+        } else if (linkPath && currentPath.includes(linkPath) && linkPath !== 'index.html') {
             link.classList.add('active');
             link.setAttribute('aria-current', 'page');
         }
