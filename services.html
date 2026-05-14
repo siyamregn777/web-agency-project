@@ -1,56 +1,132 @@
-
+<!-- services.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services - NovaWeb Agency</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Explore Nexify's services — web development, accessibility audits, UX design, and performance optimization.">
+    <title>Nexify — Our Services | Web Agency</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%233b82f6'%3E%3Cpath d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/%3E%3C/svg%3E">
 </head>
 <body>
-  <header class="header">
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="accessibility.html">Accessibility</a>
-    </nav>
-  </header>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <main>
-    <section class="services">
-      <h1>Our Services</h1>
-      <p>Discover how we can help transform your online presence.</p>
-
-      <div class="service-cards">
-        <div class="card">
-          <img src="https://via.placeholder.com/300x200/28a745/ffffff?text=Web+Design" alt="Web design illustration">
-          <h3>Web Design</h3>
-          <p>Clean, modern UI design tailored to your brand. We create visually appealing websites that engage users and drive conversions.</p>
+    <header class="site-header" id="siteHeader">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html" aria-label="Nexify homepage">Nexify<span>.</span></a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="primaryNav">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <nav id="primaryNav" class="primary-nav" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="services.html" class="nav-link active" aria-current="page">Services</a></li>
+                    <li><a href="accessibility.html" class="nav-link">Accessibility</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <div class="card">
-          <img src="https://via.placeholder.com/300x200/17a2b8/ffffff?text=Development" alt="Web development illustration">
-          <h3>Web Development</h3>
-          <p>Robust, scalable web applications built with the latest technologies. From simple sites to complex platforms, we deliver quality code.</p>
+    <main id="main-content" tabindex="-1">
+        <section class="page-hero" aria-labelledby="servicesTitle">
+            <div class="container">
+                <h1 id="servicesTitle">What we deliver</h1>
+                <p>End-to-end digital solutions built on accessibility, performance, and modern design standards.</p>
+            </div>
+        </section>
+
+        <section class="services-list" aria-labelledby="offeringsHeading">
+            <div class="container">
+                <div class="services-grid-detailed">
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">🌐</div>
+                        <h2>Custom Web Development</h2>
+                        <p>Semantic HTML5, responsive CSS Grid/Flexbox, and vanilla JavaScript — no bloat, just robust code. We build fast, accessible sites that work on every device.</p>
+                        <ul class="service-features">
+                            <li>Mobile-first responsive architecture</li>
+                            <li>WCAG 2.1 AA compliant structure</li>
+                            <li>Optimized performance & Core Web Vitals</li>
+                        </ul>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">♿</div>
+                        <h2>Accessibility Audits & Remediation</h2>
+                        <p>Comprehensive audits using automated tools + manual testing (screen readers, keyboard). We help you achieve compliance and inclusive user experiences.</p>
+                        <ul class="service-features">
+                            <li>Detailed report with actionable fixes</li>
+                            <li>ARIA, focus management, color contrast</li>
+                            <li>Training for your internal teams</li>
+                        </ul>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">🎨</div>
+                        <h2>UX/UI Design with Inclusion</h2>
+                        <p>User journeys, wireframes, and high-fidelity designs that prioritize clarity, readability, and intuitive interactions for all users.</p>
+                        <ul class="service-features">
+                            <li>User testing with diverse participants</li>
+                            <li>Design systems & accessibility tokens</li>
+                            <li>Prototypes for stakeholder validation</li>
+                        </ul>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">⚡</div>
+                        <h2>Performance Optimization</h2>
+                        <p>We analyze and refactor your existing website to improve loading times, reduce CLS, and ensure a smooth experience on slow networks.</p>
+                        <ul class="service-features">
+                            <li>Lighthouse score ≥ 90 on all metrics</li>
+                            <li>Image optimization & lazy loading</li>
+                            <li>Code splitting & resource hints</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section" aria-labelledby="ctaHeading">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 id="ctaHeading">Ready to transform your digital presence?</h2>
+                    <p>Let's build something meaningful together.</p>
+                    <a href="index.html#contactForm" class="btn btn-primary btn-large">Request a free quote →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo logo-footer">Nexify<span>.</span></div>
+                    <p>Designing an inclusive web, one experience at a time.</p>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="accessibility.html">Accessibility statement</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <address>Drottninggatan 12, 111 51 Stockholm<br>hello@nexify.agency</address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Nexify — digital agency for accessible innovation.</p>
+            </div>
         </div>
+    </footer>
 
-        <div class="card">
-          <img src="https://via.placeholder.com/300x200/dc3545/ffffff?text=SEO" alt="SEO illustration">
-          <h3>SEO Optimization</h3>
-          <p>Improve your search engine rankings and increase organic traffic. Our SEO strategies ensure your site reaches the right audience.</p>
-        </div>
-
-        <div class="card">
-          <img src="https://via.placeholder.com/300x200/ffc107/000000?text=Maintenance" alt="Maintenance illustration">
-          <h3>Website Maintenance</h3>
-          <p>Keep your site secure, updated, and performing at its best. Ongoing support to ensure your online presence stays strong.</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2026 NovaWeb Agency. All rights reserved.</p>
-  </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>

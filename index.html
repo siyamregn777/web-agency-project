@@ -1,54 +1,196 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NovaWeb Agency - Modern Web Solutions</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Nexify is a modern digital agency crafting inclusive, accessible, and high-performance web experiences.">
+    <meta name="author" content="Nexify Agency">
+    <title>Nexify — Digital Agency for Accessible Innovation</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%233b82f6'%3E%3Cpath d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/%3E%3C/svg%3E">
 </head>
 <body>
-  <header class="header">
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="accessibility.html">Accessibility</a>
-    </nav>
-  </header>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <main>
-    <section class="hero">
-      <h1>Welcome to NovaWeb Agency</h1>
-      <p>We create stunning, responsive websites that drive results for your business.</p>
-      <img src="https://via.placeholder.com/800x400/007bff/ffffff?text=Hero+Image" alt="Hero image showcasing web design">
-    </section>
+    <header class="site-header" id="siteHeader">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html" aria-label="Nexify homepage">Nexify<span>.</span></a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="primaryNav">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <nav id="primaryNav" class="primary-nav" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link" aria-current="page">Home</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="accessibility.html" class="nav-link">Accessibility</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <section class="about">
-      <h2>About Us</h2>
-      <p>At NovaWeb Agency, we specialize in crafting modern, user-friendly websites that not only look great but also perform exceptionally. Our team of experts ensures every project meets the highest standards of design, functionality, and accessibility.</p>
-    </section>
+    <main id="main-content" tabindex="-1">
+        <section class="hero" aria-labelledby="heroTitle">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <span class="hero-badge">✨ Future-proof digital agency</span>
+                    <h1 id="heroTitle">Crafting inclusive <span class="gradient-text">digital futures</span></h1>
+                    <p>We design and build websites that put people first — accessible, responsive, and performance-driven. Based in Stockholm, working worldwide.</p>
+                    <div class="hero-buttons">
+                        <a href="services.html" class="btn btn-primary">Explore services →</a>
+                        <a href="#contactForm" class="btn btn-secondary">Let's talk</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://placehold.co/600x500/1a2c3e/ffffff?text=Modern+Design+Studio" alt="Nexify creative team workspace concept" loading="eager">
+                </div>
+            </div>
+        </section>
 
-    <section class="contact">
-      <h2>Get in Touch</h2>
-      <form>
-        <label for="name">Name</label>
-        <input type="text" id="name" required>
+        <section class="principles" aria-labelledby="principlesHeading">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Why choose us</span>
+                    <h2 id="principlesHeading">Design, usability & accessibility first</h2>
+                    <p>Every decision we make follows proven standards to ensure your website works for everyone.</p>
+                </div>
+                <div class="principles-grid">
+                    <article class="principle-card">
+                        <div class="principle-icon" aria-hidden="true">📱</div>
+                        <h3>Mobile First</h3>
+                        <p>Fluid layouts, touch-optimized, and blazing fast on any device. We prioritize small screens without compromise.</p>
+                    </article>
+                    <article class="principle-card">
+                        <div class="principle-icon" aria-hidden="true">♿</div>
+                        <h3>Accessible by default</h3>
+                        <p>WCAG 2.1 AA compliant — semantic HTML, keyboard navigation, screen reader support, and high contrast ratios.</p>
+                    </article>
+                    <article class="principle-card">
+                        <div class="principle-icon" aria-hidden="true">⚡</div>
+                        <h3>Performance & clarity</h3>
+                        <p>Interactive elements are unmistakable, consistent visual language, and robust usability across all breakpoints.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" required>
+        <section class="contact-form-section" id="contactForm" aria-labelledby="formHeading">
+            <div class="container">
+                <div class="form-wrapper">
+                    <div class="form-info">
+                        <h2 id="formHeading">Request a free consultation</h2>
+                        <p>Share your vision with us. Our experts will reach out within 48 hours to craft your digital roadmap.</p>
+                        <ul class="form-benefits">
+                            <li>✅ Strategy & scoping session</li>
+                            <li>✅ Accessibility audit (basic)</li>
+                            <li>✅ No obligation, fully transparent</li>
+                        </ul>
+                    </div>
+                    <form class="agency-form" id="demoForm" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullname">Full name *</label>
+                                <input type="text" id="fullname" name="fullname" required aria-required="true" placeholder="Alexandra Chen">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email address *</label>
+                                <input type="email" id="email" name="email" required aria-required="true" placeholder="hello@company.com">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Preferred start date</label>
+                                <input type="date" id="date" name="date">
+                            </div>
+                            <div class="form-group">
+                                <label for="budget">Estimated budget (SEK) *</label>
+                                <input type="number" id="budget" name="budget" required aria-required="true" placeholder="250000" step="10000">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Project description *</label>
+                            <textarea id="message" name="message" rows="4" required aria-required="true" placeholder="Tell us about your goals, audience, and required features..."></textarea>
+                        </div>
+                        <div class="form-note">* Required fields. This is a demo form — no data is stored.</div>
+                        <button type="submit" class="btn btn-primary btn-block">Send request →</button>
+                    </form>
+                </div>
+            </div>
+        </section>
 
-        <label for="start-date">Start Date</label>
-        <input type="date" id="start-date">
+        <section class="showcase" aria-labelledby="showcaseHeading">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Our latest creations</span>
+                    <h2 id="showcaseHeading">Trusted by innovators</h2>
+                    <p>Real solutions, real impact — see what we've built.</p>
+                </div>
+                <div class="showcase-grid">
+                    <article class="showcase-item">
+                        <img src="https://placehold.co/400x300/2c3e50/ffffff?text=Eco+Retail+App" alt="E-commerce dashboard preview - placeholder" loading="lazy">
+                        <h3>EcoNordic Marketplace</h3>
+                        <p>Sustainable e‑commerce with full WCAG compliance.</p>
+                    </article>
+                    <article class="showcase-item">
+                        <img src="https://placehold.co/400x300/34495e/ffffff?text=Health+Portal" alt="Healthcare platform interface - placeholder" loading="lazy">
+                        <h3>VårdPlus Portal</h3>
+                        <p>Healthcare platform serving 200k+ monthly users.</p>
+                    </article>
+                    <article class="showcase-item">
+                        <img src="https://placehold.co/400x300/2c3e50/ffffff?text=Culture+Hub" alt="Museum interactive website - placeholder" loading="lazy">
+                        <h3>Stockholm Culture Hub</h3>
+                        <p>Interactive museum guide with adaptive design.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
 
-        <label for="budget">Budget ($)</label>
-        <input type="number" id="budget" min="0">
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo logo-footer">Nexify<span>.</span></div>
+                    <p>Designing an inclusive web, one experience at a time.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn">in</a>
+                        <a href="#" aria-label="GitHub">gh</a>
+                        <a href="#" aria-label="Twitter">𝕏</a>
+                    </div>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="accessibility.html">Accessibility statement</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy policy</a></li>
+                        <li><a href="#">Cookie notice</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <address>Drottninggatan 12, 111 51 Stockholm<br>hello@nexify.agency</address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Nexify — digital agency for accessible innovation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-        <button type="submit">Send Inquiry</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2026 NovaWeb Agency. All rights reserved.</p>
-  </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>

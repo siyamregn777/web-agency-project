@@ -1,49 +1,124 @@
+<!-- accessibility.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accessibility Statement - NovaWeb Agency</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Nexify Accessibility Statement — our commitment to digital inclusion, WCAG 2.1 AA compliance, and ongoing improvements.">
+    <title>Accessibility Statement | Nexify Agency</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%233b82f6'%3E%3Cpath d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/%3E%3C/svg%3E">
 </head>
 <body>
-  <header class="header">
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="accessibility.html">Accessibility</a>
-    </nav>
-  </header>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <main>
-    <section class="accessibility">
-      <h1>Accessibility Statement</h1>
+    <header class="site-header" id="siteHeader">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html" aria-label="Nexify homepage">Nexify<span>.</span></a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="primaryNav">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <nav id="primaryNav" class="primary-nav" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="accessibility.html" class="nav-link active" aria-current="page">Accessibility</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-      <p>NovaWeb Agency is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards.</p>
+    <main id="main-content" tabindex="-1">
+        <section class="page-hero accessibility-hero" aria-labelledby="statementTitle">
+            <div class="container">
+                <h1 id="statementTitle">Accessibility Statement</h1>
+                <p>Nexify is committed to ensuring digital accessibility for people with disabilities. We continuously improve the user experience for everyone and apply relevant accessibility standards.</p>
+            </div>
+        </section>
 
-      <h2>Conformance Status</h2>
-      <p>The Web Content Accessibility Guidelines (WCAG) defines requirements for designers and developers to improve accessibility for people with disabilities. It defines three levels of conformance: Level A, Level AA, and Level AAA. NovaWeb Agency is partially conformant with WCAG 2.1 level AA. Partially conformant means that some parts of the content do not fully conform to the accessibility standard.</p>
+        <div class="container statement-container">
+            <div class="statement-content">
+                <div class="statement-card">
+                    <h2>Our commitment</h2>
+                    <p>Nexify strives to make its website and digital services accessible to all people, regardless of technology or ability. We are actively working to increase accessibility and usability of our website to conform to the Web Content Accessibility Guidelines (WCAG) 2.1 level AA.</p>
+                </div>
 
-      <h2>Feedback</h2>
-      <p>We welcome your feedback on the accessibility of NovaWeb Agency. Please let us know if you encounter accessibility barriers on NovaWeb Agency:</p>
-      <ul>
-        <li>Phone: +1 (555) 123-4567</li>
-        <li>Email: accessibility@novwebagency.com</li>
-      </ul>
+                <div class="statement-card">
+                    <h2>Compliance status</h2>
+                    <p>This website is <strong>partially compliant</strong> with the Swedish accessibility regulations (Lagen om tillgänglighet till digital offentlig service). We have designed and tested internal pages to meet WCAG 2.1 AA, with ongoing audits and remediation.</p>
+                    <ul>
+                        <li>✔️ Text alternatives for non-text content</li>
+                        <li>✔️ Keyboard accessible navigation & focus indicators</li>
+                        <li>✔️ Sufficient color contrast (minimum 4.5:1)</li>
+                        <li>✔️ Semantic HTML structure & ARIA landmarks</li>
+                        <li>✔️ Responsive zoom without horizontal scroll</li>
+                        <li>🔄 Ongoing: third-party integrations testing</li>
+                    </ul>
+                </div>
 
-      <h2>Technical Specifications</h2>
-      <p>Accessibility of NovaWeb Agency relies on the following technologies to work with the particular combination of web browser and any assistive technologies or plugins installed on your computer:</p>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-      </ul>
-      <p>These technologies are relied upon for conformance with the accessibility standards used.</p>
-    </section>
-  </main>
+                <div class="statement-card">
+                    <h2>Technical information</h2>
+                    <p>This website is designed to be compatible with assistive technologies including screen readers (NVDA, VoiceOver, TalkBack) and browser zoom up to 200%. We use:</p>
+                    <ul>
+                        <li>HTML5 & CSS3 with responsive design</li>
+                        <li>JavaScript for interactive components (hamburger menu) with ARIA attributes</li>
+                        <li>No reliance on hover-only interactions</li>
+                        <li>Focus management and skip-to-content links</li>
+                    </ul>
+                </div>
 
-  <footer>
-    <p>&copy; 2026 NovaWeb Agency. All rights reserved.</p>
-  </footer>
+                <div class="statement-card">
+                    <h2>Feedback and contact information</h2>
+                    <p>We welcome your feedback on the accessibility of this site. If you encounter any barriers or have suggestions, please contact us:</p>
+                    <address>
+                        Email: <a href="mailto:accessibility@nexify.agency">accessibility@nexify.agency</a><br>
+                        Phone: +46 (0)8 12 34 56<br>
+                        Postal: Nexify AB, Drottninggatan 12, 111 51 Stockholm
+                    </address>
+                </div>
+
+                <div class="statement-card">
+                    <h2>Enforcement procedure</h2>
+                    <p>If you are not satisfied with our response, you have the right to report the matter to the Swedish Agency for Digital Government (DIGG). We aim to resolve accessibility issues promptly and transparently.</p>
+                    <p><em>This statement was last updated on May 15, 2025. Regular audits will be conducted every six months.</em></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo logo-footer">Nexify<span>.</span></div>
+                    <p>Inclusive design is not a feature — it's a mindset.</p>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="accessibility.html">Accessibility statement</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <address>Drottninggatan 12, 111 51 Stockholm<br>hello@nexify.agency</address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Nexify — committed to digital inclusion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
