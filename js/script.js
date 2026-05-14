@@ -1,0 +1,1 @@
+// Navbar is always visible, no toggle needed
